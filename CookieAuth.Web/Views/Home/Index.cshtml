@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cookie-Based Authentication Demo</h1>
+    <p class="lead">This is a demonstration of cookie-based authentication in .NET 9 using an API and MVC web interface.</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Features</h5>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Secure cookie-based authentication</li>
+                    <li>User registration and login</li>
+                    <li>Protected routes and resources</li>
+                    <li>Remember me functionality</li>
+                    <li>Shared authentication between API and UI</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Getting Started</h5>
+            </div>
+            <div class="card-body">
+                @if (User.Identity?.IsAuthenticated == true)
+                {
+                    <p>You are logged in. Visit your <a asp-controller="Home" asp-action="Profile">profile</a> to see your user information.</p>
+                    <form asp-controller="Account" asp-action="Logout" method="post">
+                        <button type="submit" class="btn btn-outline-danger">Logout</button>
+                    </form>
+                }
+                else
+                {
+                    <p>To test the authentication system, please register or login:</p>
+                    <div class="d-flex gap-2">
+                        <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Register</a>
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-success">Login</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

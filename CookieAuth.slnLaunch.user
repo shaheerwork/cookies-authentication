@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "CookieAuth.API\\CookieAuth.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "CookieAuth.Web\\CookieAuth.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
