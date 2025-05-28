@@ -12,9 +12,9 @@ namespace CookieAuth.API.Controllers
     {
         private static readonly List<TestItem> _testItems = new()
         {
-            new TestItem { Id = 1, Name = "Test Item 1", Description = "Description for test item 1" },
-            new TestItem { Id = 2, Name = "Test Item 2", Description = "Description for test item 2" },
-            new TestItem { Id = 3, Name = "Test Item 3", Description = "Description for test item 3" }
+            new TestItem { Id = 1, Name = "Test Item 2", Description = "Description for test item 1" },
+            new TestItem { Id = 2, Name = "Test Item 3", Description = "Description for test item 2" },
+            new TestItem { Id = 3, Name = "Test Item 4", Description = "Description for test item 3" }
         };
 
         // GET: api/Test
@@ -31,7 +31,7 @@ namespace CookieAuth.API.Controllers
             var item = _testItems.Find(i => i.Id == id);
             if (item == null)
             {
-                return NotFound(new { Message = $"Item with ID {id} not found" });
+                return NotFound(new { Message = $"test Item with ID {id} not found" });
             }
 
             return Ok(item);
