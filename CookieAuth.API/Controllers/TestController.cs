@@ -12,9 +12,9 @@ namespace CookieAuth.API.Controllers
     {
         private static readonly List<TestItem> _testItems = new()
         {
-            new TestItem { Id = 1, Name = "Test Item 2", Description = "Description for test item 1" },
-            new TestItem { Id = 2, Name = "Test Item 3", Description = "Description for test item 2" },
-            new TestItem { Id = 3, Name = "Test Item 4", Description = "Description for test item 3" }
+            new TestItem { Id = 1, Name = "Test Item 1", Description = "Description for test item 1" },
+            new TestItem { Id = 2, Name = "Test Item 5", Description = "Description for test item 2" },
+            new TestItem { Id = 3, Name = "Test Item 8", Description = "Description for test item 3" }
         };
 
         // GET: api/Test
@@ -71,7 +71,7 @@ namespace CookieAuth.API.Controllers
             var existingItem = _testItems.Find(i => i.Id == id);
             if (existingItem == null)
             {
-                return NotFound(new { Message = $"Item with ID {id} not found" });
+                return NotFound(new { Message = $"Item1 with ID {id} not found" });
             }
 
             existingItem.Name = request.Name;
@@ -87,11 +87,11 @@ namespace CookieAuth.API.Controllers
             var existingItem = _testItems.Find(i => i.Id == id);
             if (existingItem == null)
             {
-                return NotFound(new { Message = $"Item with ID {id} not found" });
+                return NotFound(new { Message = $"Item1 with ID {id} not found" });
             }
 
             _testItems.Remove(existingItem);
-            return Ok(new { Message = $"Item with ID {id} deleted successfully" });
+            return Ok(new { Message = $"Item1 with ID {id} deleted successfully" });
         }
 
         // GET: api/Test/secure
@@ -100,7 +100,7 @@ namespace CookieAuth.API.Controllers
         public IActionResult GetSecure()
         {
             var userName = User.Identity?.Name ?? "Unknown User";
-            return Ok(new { Message = $"Hello {userName}! This is a secure endpoint" });
+            return Ok(new { Message = $"Hello1 {userName}! This is a secure endpoint" });
         }
     }
 
