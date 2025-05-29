@@ -17,8 +17,20 @@ builder.Services.AddHttpClient<IAuthService, AuthService>(client =>
     AllowAutoRedirect = false
 });
 
+// Configure HttpClient for Products API
+builder.Services.AddHttpClient<IProductService, ProductService>(client =>
+{
+    client.DefaultRequestHeaders.Add("User-Agent", "CookieAuth.Web");
+})
+.ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+{
+    UseCookies = true,
+    AllowAutoRedirect = false
+});
+
 // Register services
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 // Configure authentication
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
