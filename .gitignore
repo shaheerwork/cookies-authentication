@@ -407,3 +407,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/.vs/CookieAuth/CopilotIndices/17.14.698.11175/CodeChunks.db
+/.vs/CookieAuth/CopilotIndices/17.14.698.11175/SemanticSymbols.db
