@@ -409,3 +409,11 @@ FodyWeavers.xsd
 *.sln.iml
 /.vs/CookieAuth/CopilotIndices/17.14.698.11175/CodeChunks.db
 /.vs/CookieAuth/CopilotIndices/17.14.698.11175/SemanticSymbols.db
+/.vs/CookieAuth/v17/.suo
+/CookieAuth.API/obj/Debug/net9.0/CookieAuth.API.AssemblyInfo.cs
+/CookieAuth.API/obj/Debug/net9.0/CookieAuth.API.AssemblyInfoInputs.cache
+/CookieAuth.Shared/obj/Debug/net9.0/CookieAuth.Shared.AssemblyInfo.cs
+/CookieAuth.Shared/obj/Debug/net9.0/CookieAuth.Shared.AssemblyInfoInputs.cache
+/CookieAuth.Web/obj/Debug/net9.0/CookieAuth.Web.AssemblyInfo.cs
+/CookieAuth.Web/obj/Debug/net9.0/CookieAuth.Web.AssemblyInfoInputs.cache
+/CookieAuth.Web/obj/Debug/net9.0/rpswa.dswa.cache.json
